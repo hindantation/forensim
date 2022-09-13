@@ -1,12 +1,12 @@
 # Remove the previous line if you edit this file
-useDynLib(forensim)
+useDynLib(forensim, .registration = TRUE)
 # Export all names
 exportPattern(".")
-
-# Import all packages listed as Imports or Depends
-import(
-methods,
-tcltk,
-   tcltk2,
-  tkrplot
-)
+importFrom("methods", "is", "new", "slot", "slot<-", "slotNames",
+             "validObject")
+importFrom("graphics", "abline", "arrows", "axis", "grid", "hist",
+             "legend", "lines", "par", "points", "title")
+importFrom("stats", "binomial", "ecdf", "glm", "na.omit", "predict",
+             "quantile", "rbinom", "residuals", "rgamma", "rnorm",
+             "runif")
+importFrom("utils", "help", "read.csv", "read.table", "write.table")

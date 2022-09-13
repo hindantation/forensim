@@ -4,14 +4,14 @@
 
 "A3.simu" <- function()
 {
-	# if(!require(tcltk)) stop("package tcltk is required")
-	tclRequire("Tktable")
+	#if(!require(tcltk)) stop("package tcltk is required")
+	tcltk::tclRequire("Tktable")
 	#fonts definition
-	font0 <- tkfont.create(family="times",size=35,weight="bold",slant="italic")
-	font1<-tkfont.create(family="times",size=14,weight="bold")#,slant="italic")
-	font2<-tkfont.create(family="times",size=16,weight="bold",slant="italic")
-	font3<-tkfont.create(family="times",size=10,weight="bold")#,slant="italic")
-	font4<-tkfont.create(family="times",size=12)#,slant="italic")
+	font0 <- tcltk::tkfont.create(family="times",size=35,weight="bold",slant="italic")
+	font1<-tcltk::tkfont.create(family="times",size=14,weight="bold")#,slant="italic")
+	font2<-tcltk::tkfont.create(family="times",size=16,weight="bold",slant="italic")
+	font3<-tcltk::tkfont.create(family="times",size=10,weight="bold")#,slant="italic")
+	font4<-tcltk::tkfont.create(family="times",size=12)#,slant="italic")
 	#three-allele model: numeric results
 	threeAmod<- function(Mx,peak1,peak2,peak3)
 	{
@@ -85,42 +85,42 @@
 
 
 	#main frame definition
-	tt <- tktoplevel()
-	tkwm.title(tt,"Three-allele model simulations")
+	tt <- tcltk::tktoplevel()
+	tcltk::tkwm.title(tt,"Three-allele model simulations")
 
-    frame1 <- tkframe(tt, relief="groove", borderwidth=2)
-    frame2 <- tkframe(tt, relief="groove", borderwidth=2)
+    frame1 <- tcltk::tkframe(tt, relief="groove", borderwidth=2)
+    frame2 <- tcltk::tkframe(tt, relief="groove", borderwidth=2)
    
-    xyframe <- tkframe(frame1, relief="groove", borderwidth=2)
-    labframe <- tkframe(frame1, relief="groove", borderwidth=2)
-    limframe <- tkframe(frame2, relief="groove", borderwidth=2)
-    posframe <- tkframe(frame2, relief="groove", borderwidth=2)
-    legframe <- tkframe(frame2, relief="groove", borderwidth=2)
+    xyframe <- tcltk::tkframe(frame1, relief="groove", borderwidth=2)
+    labframe <- tcltk::tkframe(frame1, relief="groove", borderwidth=2)
+    limframe <- tcltk::tkframe(frame2, relief="groove", borderwidth=2)
+    posframe <- tcltk::tkframe(frame2, relief="groove", borderwidth=2)
+    legframe <- tcltk::tkframe(frame2, relief="groove", borderwidth=2)
     
 #
 # Variables for text fields
 #
-	xy1var <- tclVar(1000)
-	xy2var <- tclVar(1100)
-	xy3var<-  tclVar(1900)
-	mixvar <- tclVar(0.70)
+	xy1var <- tcltk::tclVar(1000)
+	xy2var <- tcltk::tclVar(1100)
+	xy3var<-  tcltk::tclVar(1900)
+	mixvar <- tcltk::tclVar(0.70)
 	
 # Title
 #
-	TFrame <- tkframe(tt, relief="groove")
-	labh <- tklabel(TFrame)
-	tkgrid(tklabel(TFrame,text="Three-allele model", font=font2, foreground="red"), labh)
-	tkpack(TFrame)
+	TFrame <- tcltk::tkframe(tt, relief="groove")
+	labh <- tcltk::tklabel(TFrame)
+	tcltk::tkgrid(tcltk::tklabel(TFrame,text="Three-allele model", font=font2, foreground="red"), labh)
+	tcltk::tkpack(TFrame)
 #
 # Coordinates frame
 #
-	xy1.entry <- tkentry(xyframe, textvariable=xy1var, width=8)
-	xy2.entry <- tkentry(xyframe, textvariable=xy2var, width=8)
-	xy3.entry <- tkentry(xyframe, textvariable=xy3var, width=8)
+	xy1.entry <- tcltk::tkentry(xyframe, textvariable=xy1var, width=8)
+	xy2.entry <- tcltk::tkentry(xyframe, textvariable=xy2var, width=8)
+	xy3.entry <- tcltk::tkentry(xyframe, textvariable=xy3var, width=8)
 	peak1<-function()
 	{
-		p1<-as.numeric(tclvalue(xy1var))
-		if(p1<0){tkmessageBox(message="Invalid value for the peak height of allele #1",icon="error",type="ok")}
+		p1<-as.numeric(tcltk::tclvalue(xy1var))
+		if(p1<0){tcltk::tkmessageBox(message="Invalid value for the peak height of allele #1",icon="error",type="ok")}
 		else{return(p1)}
 	}
 	
@@ -128,52 +128,52 @@
 	
 	peak2<-function()
 	{
-		p2<-as.numeric(tclvalue(xy2var))
-		if(p2<0){tkmessageBox(message="Invalid value for the peak height of allele #2",icon="error",type="ok")
+		p2<-as.numeric(tcltk::tclvalue(xy2var))
+		if(p2<0){tcltk::tkmessageBox(message="Invalid value for the peak height of allele #2",icon="error",type="ok")
 		}
 		else{return(p2)}
 	}
 	
 	peak3<-function()
 	{
-		p3<-as.numeric(tclvalue(xy3var))
-		if(p3<0){tkmessageBox(message="Invalid value for the peak height of allele #3",icon="error",type="ok")
+		p3<-as.numeric(tcltk::tclvalue(xy3var))
+		if(p3<0){tcltk::tkmessageBox(message="Invalid value for the peak height of allele #3",icon="error",type="ok")
 		}
 		else{return(p3)}
 	}
-	# choosexy1.but <- tkbutton(xyframe, text="Enter", command=function()peak1())
-	# choosexy2.but <- tkbutton(xyframe, text="Enter", command=function() peak2())
-	# choosexy3.but <- tkbutton(xyframe, text="Enter", command=function() peak3())
+	# choosexy1.but <- tcltk::tkbutton(xyframe, text="Enter", command=function()peak1())
+	# choosexy2.but <- tcltk::tkbutton(xyframe, text="Enter", command=function() peak2())
+	# choosexy3.but <- tcltk::tkbutton(xyframe, text="Enter", command=function() peak3())
 
-	tkgrid(tklabel(xyframe, text="- Peak heights (rfu) -", font=font3,foreground="blue"), columnspan=5)
-	tkgrid(tklabel(xyframe,text="Allele #1: "), xy1.entry)#, choosexy1.but)
-	tkgrid(tklabel(xyframe,text="Allele #2: "), xy2.entry)#, choosexy2.but)
-	tkgrid(tklabel(xyframe,text="Allele #3: "), xy3.entry)#, choosexy3.but)
+	tcltk::tkgrid(tcltk::tklabel(xyframe, text="- Peak heights (rfu) -", font=font3,foreground="blue"), columnspan=5)
+	tcltk::tkgrid(tcltk::tklabel(xyframe,text="Allele #1: "), xy1.entry)#, choosexy1.but)
+	tcltk::tkgrid(tcltk::tklabel(xyframe,text="Allele #2: "), xy2.entry)#, choosexy2.but)
+	tcltk::tkgrid(tcltk::tklabel(xyframe,text="Allele #3: "), xy3.entry)#, choosexy3.but)
 
 # Labels frame
 #
-	lab.entry <- tkentry(labframe, textvariable=mixvar, width=8)
+	lab.entry <- tcltk::tkentry(labframe, textvariable=mixvar, width=8)
 	prop<-function() 
 	{
-		Mx<-as.numeric(tclvalue(mixvar))
+		Mx<-as.numeric(tcltk::tclvalue(mixvar))
 		if(Mx>1 || Mx<0){
-		tkmessageBox(message="Mx is the mixture proportion, it must be comprised in the interval [0,1]",icon="error",type="ok")
+		tcltk::tkmessageBox(message="Mx is the mixture proportion, it must be comprised in the interval [0,1]",icon="error",type="ok")
 
 		}
 		else{return(Mx)}
 		#print(Mx)
 		
 	}
-	#chooselab.but <- tkbutton(labframe, text="Set", command= function() prop())#function() print(tclvalue(mixvar)))
-	tkgrid(tklabel(labframe, text="- Mixture proportion  -",font=font3, foreground="blue"), columnspan=3)
+	#chooselab.but <- tcltk::tkbutton(labframe, text="Set", command= function() prop())#function() print(tcltk::tclvalue(mixvar)))
+	tcltk::tkgrid(tcltk::tklabel(labframe, text="- Mixture proportion  -",font=font3, foreground="blue"), columnspan=3)
 	#lab.entry pour dire que c'est l'entree lab.entry, et le label est celui de "set"
-	tkgrid(tklabel(labframe,text="Mx : "), lab.entry)#, chooselab.but)
-	#tkgrid(tklabel(labframe,text="1-Mx : "), lab2.entry)
-	tkpack(xyframe, labframe, side="left")
-	tkpack(frame1)
+	tcltk::tkgrid(tcltk::tklabel(labframe,text="Mx : "), lab.entry)#, chooselab.but)
+	#tcltk::tkgrid(tcltk::tklabel(labframe,text="1-Mx : "), lab2.entry)
+	tcltk::tkpack(xyframe, labframe, side="left")
+	tcltk::tkpack(frame1)
 
 # 
-RCSFrame <- tkframe(tt, relief="groove")
+RCSFrame <- tcltk::tkframe(tt, relief="groove")
 
 
 plotFunction<-function()
@@ -211,7 +211,7 @@ propFunction<-function()
 	"BC,AB",resdata[12,])
 
 	dim(myRarray) <- c(18,13)
-	tclarray <- tclArray()
+	tclarray <- tcltk::tclArray()
 	for(i in 0:17)
 	{
 		for (j in (0:12))
@@ -227,24 +227,24 @@ propFunction<-function()
 	dim(myRarray3)<-c(1,length(resmix))
 	#myRarray3
 
-	tclarray2 <- tclArray()
+	tclarray2 <- tcltk::tclArray()
 	for(k in 0:(length(resgeno)-1))
 	{
 		tclarray2[[0,k]] <- myRarray2[1,k+1]
 	}		
-	tclarray3 <- tclArray()
+	tclarray3 <- tcltk::tclArray()
 	for(h in 0:(length(resmix)-1))
 	{
 		tclarray3[[0,h]] <- myRarray3[1,h+1]
 	}		
 	
 		
-	tclarray2 <- tclArray()
+	tclarray2 <- tcltk::tclArray()
 	for(k in 0:(length(resgeno)-1))
 	{
 		tclarray2[[0,k]] <- myRarray2[1,k+1]
 	}		
-	tclarray3 <- tclArray()
+	tclarray3 <- tcltk::tclArray()
 	for(h in 0:(length(resmix)-1))
 	{
 		tclarray3[[0,h]] <- myRarray3[1,h+1]
@@ -264,44 +264,44 @@ propFunction<-function()
 		saveFunction<-function()
 		{
 			
-			ss<-tktoplevel()
-			SSframe <- tkframe(ss, relief="groove",width=35)
-			tkwm.title(ss,"")
-			filevar1 <- tclVar("simulation3.txt")
-			filevar1.entry <- tkentry(SSframe, textvariable=filevar1, width=12)
-			filevar2 <- tclVar("likelihood3.txt")
-			filevar2.entry <- tkentry(SSframe, textvariable=filevar2, width=12)
-			#filevar2.entry <- tkentry(SSframe, textvariable=filevar, width=12)
-			#tkgrid(tklabel(SSframe, text="- Enter filenames -",font=font1, foreground="blue"), columnspan=15)
-			save1.butt<-tkbutton(ss, text="Enter", font=font3,command=function() save1(tclvalue(filevar1),tclvalue(filevar2)))
-			tkgrid(tklabel(SSframe,text="Simulations results",font=font4), filevar1.entry)
-			tkgrid(tklabel(SSframe,text="Maximum likelihood",font=font4), filevar2.entry)
-			tkgrid(filevar2.entry, save1.butt)		
-			tkpack(SSframe)
+			ss<-tcltk::tktoplevel()
+			SSframe <- tcltk::tkframe(ss, relief="groove",width=35)
+			tcltk::tkwm.title(ss,"")
+			filevar1 <- tcltk::tclVar("simulation3.txt")
+			filevar1.entry <- tcltk::tkentry(SSframe, textvariable=filevar1, width=12)
+			filevar2 <- tcltk::tclVar("likelihood3.txt")
+			filevar2.entry <- tcltk::tkentry(SSframe, textvariable=filevar2, width=12)
+			#filevar2.entry <- tcltk::tkentry(SSframe, textvariable=filevar, width=12)
+			#tcltk::tkgrid(tcltk::tklabel(SSframe, text="- Enter filenames -",font=font1, foreground="blue"), columnspan=15)
+			save1.butt<-tcltk::tkbutton(ss, text="Enter", font=font3,command=function() save1(tcltk::tclvalue(filevar1),tcltk::tclvalue(filevar2)))
+			tcltk::tkgrid(tcltk::tklabel(SSframe,text="Simulations results",font=font4), filevar1.entry)
+			tcltk::tkgrid(tcltk::tklabel(SSframe,text="Maximum likelihood",font=font4), filevar2.entry)
+			tcltk::tkgrid(filevar2.entry, save1.butt)		
+			tcltk::tkpack(SSframe)
 		}
 		
-		tclRequire("Tktable")
-		tt<-tktoplevel()
-		tkwm.title(tt,"Most likely genotypes combination")
-		table1 <- tkwidget(tt,"table",variable=tclarray,rows=18,colwidth=8,cols=13,titlerows=1,background="white")
-		table2 <- tkwidget(tt,"table",variable=tclarray2,
+		tcltk::tclRequire("Tktable")
+		tt<-tcltk::tktoplevel()
+		tcltk::tkwm.title(tt,"Most likely genotypes combination")
+		table1 <- tcltk::tkwidget(tt,"table",variable=tclarray,rows=18,colwidth=8,cols=13,titlerows=1,background="white")
+		table2 <- tcltk::tkwidget(tt,"table",variable=tclarray2,
 		cols=length(resgeno),selectmode="extended",colwidth=10,rows=1,background="lightblue")
-		table3 <- tkwidget(tt,"table",variable=tclarray3,
+		table3 <- tcltk::tkwidget(tt,"table",variable=tclarray3,
 		cols=length(resmix),selectmode="extended",colwidth=10,rows=1,background="lightblue")
-		tit1<-tkwidget(tt,"label",text="Matrix of the residuals",font=font1,foreground="blue")	
-		tit2<-tkwidget(tt,"label",text="Maximum likelihood estimation results",font=font1,foreground="blue")
-		tit3<-tkwidget(tt,"label",text="Most likely genotype combinations",font=font1,foreground="blue")
-		tit4<-tkwidget(tt,"label",text="Corresponding mixture proportions",font=font1,foreground="blue")
-		#tkgrid(tklabel(tt,text="File name"), filevar.entry, save1.butt)
-		filelab<-tkwidget(tt,"label",text="-Save the results-",font=font3,foreground="blue")
-		save.butt<-tkbutton(tt, text="Save", font=font3,command=saveFunction)
-		tkpack(tit1,table1,tit3,table2,tit4,table3,save.butt)
+		tit1<-tcltk::tkwidget(tt,"label",text="Matrix of the residuals",font=font1,foreground="blue")	
+		tit2<-tcltk::tkwidget(tt,"label",text="Maximum likelihood estimation results",font=font1,foreground="blue")
+		tit3<-tcltk::tkwidget(tt,"label",text="Most likely genotype combinations",font=font1,foreground="blue")
+		tit4<-tcltk::tkwidget(tt,"label",text="Corresponding mixture proportions",font=font1,foreground="blue")
+		#tcltk::tkgrid(tcltk::tklabel(tt,text="File name"), filevar.entry, save1.butt)
+		filelab<-tcltk::tkwidget(tt,"label",text="-Save the results-",font=font3,foreground="blue")
+		save.butt<-tcltk::tkbutton(tt, text="Save", font=font3,command=saveFunction)
+		tcltk::tkpack(tit1,table1,tit3,table2,tit4,table3,save.butt)
 		
 	}
 	
 	
 		
-		#tkpack(filevar.entry,save1.butt,side="left")
+		#tcltk::tkpack(filevar.entry,save1.butt,side="left")
 		
 
 filterFunction<-function()
@@ -315,7 +315,7 @@ filterFunction<-function()
 	genotypes<-as.character(tmp1$genotypes)
 	tab1<-c("Genotype",genotypes,"Mx conditioned",Mx.C)
 	dim(tab1)<-c(13,2)
-	tab1array <- tclArray()
+	tab1array <- tcltk::tclArray()
 
 	for(m in 0:12){
 	for (n in (0:1)){
@@ -331,39 +331,39 @@ filterFunction<-function()
 		saveFunction2<-function()
 		{
 			
-			hh<-tktoplevel()
-			HHframe<- tkframe(hh, relief="groove")
-			tkwm.title(hh,"Filenames")
-			filtervar<- tclVar("filter3.txt")
-			filtervar.entry <- tkentry(HHframe, textvariable=filtervar, width=12)
-			#filevar2.entry <- tkentry(SSframe, textvariable=filevar, width=12)
-			#tkgrid(tklabel(HHframe, text="- Enter filename -",font=font1, foreground="blue"), columnspan=15)
-			saveHH.butt<-tkbutton(hh, text="Enter", font=font3,command=function() saveHH(tclvalue(filtervar)))
-			tkgrid(tklabel(HHframe,text="Genotypes filter",font=font4), filtervar.entry)
-			#tkgrid(tklabel(SSframe,text="Maximum likelihood",font=font4), filevar2.entry)
-			tkgrid(filtervar.entry, saveHH.butt)		
-			tkpack(HHframe)
+			hh<-tcltk::tktoplevel()
+			HHframe<- tcltk::tkframe(hh, relief="groove")
+			tcltk::tkwm.title(hh,"Filenames")
+			filtervar<- tcltk::tclVar("filter3.txt")
+			filtervar.entry <- tcltk::tkentry(HHframe, textvariable=filtervar, width=12)
+			#filevar2.entry <- tcltk::tkentry(SSframe, textvariable=filevar, width=12)
+			#tcltk::tkgrid(tcltk::tklabel(HHframe, text="- Enter filename -",font=font1, foreground="blue"), columnspan=15)
+			saveHH.butt<-tcltk::tkbutton(hh, text="Enter", font=font3,command=function() saveHH(tcltk::tclvalue(filtervar)))
+			tcltk::tkgrid(tcltk::tklabel(HHframe,text="Genotypes filter",font=font4), filtervar.entry)
+			#tcltk::tkgrid(tcltk::tklabel(SSframe,text="Maximum likelihood",font=font4), filevar2.entry)
+			tcltk::tkgrid(filtervar.entry, saveHH.butt)		
+			tcltk::tkpack(HHframe)
 		}
 		
 		
 		
-		tclRequire("Tktable")
-		tt2<-tktoplevel()
-		tkwm.title(tt2,"Genotypes filter")
-		#tab1.tit<-tkwidget(tt2,"label",text="Genotypes filter",font=font1,foreground="blue")
-		save2.butt<-tkbutton(tt2, text="Save", font=font3,command=saveFunction2)
-		tab1.tcl<-tkwidget(tt2,"table",variable=tab1array,rows=13,colwidth=18,cols=2,titlerows=1,background="white")
-		tkpack(tab1.tcl,save2.butt)
-		#tkpack(tab1.tit,tab1.tcl,save2.butt)
+		tcltk::tclRequire("Tktable")
+		tt2<-tcltk::tktoplevel()
+		tcltk::tkwm.title(tt2,"Genotypes filter")
+		#tab1.tit<-tcltk::tkwidget(tt2,"label",text="Genotypes filter",font=font1,foreground="blue")
+		save2.butt<-tcltk::tkbutton(tt2, text="Save", font=font3,command=saveFunction2)
+		tab1.tcl<-tcltk::tkwidget(tt2,"table",variable=tab1array,rows=13,colwidth=18,cols=2,titlerows=1,background="white")
+		tcltk::tkpack(tab1.tcl,save2.butt)
+		#tcltk::tkpack(tab1.tit,tab1.tcl,save2.butt)
 		
 					
 	
 }
-	A1.but <- tkbutton(RCSFrame, text="Plot simulations",font=font3, command=plotFunction)#twoAmod())
-	A2.but <- tkbutton(RCSFrame, text="Simulation details", font=font3,command=propFunction)
-	A3.but <- tkbutton(RCSFrame, text="Genotype filter", font=font3,command=filterFunction)
-	tkgrid(A1.but,A2.but,A3.but,ipadx=20)	
-	tkpack(RCSFrame)
+	A1.but <- tcltk::tkbutton(RCSFrame, text="Plot simulations",font=font3, command=plotFunction)#twoAmod())
+	A2.but <- tcltk::tkbutton(RCSFrame, text="Simulation details", font=font3,command=propFunction)
+	A3.but <- tcltk::tkbutton(RCSFrame, text="Genotype filter", font=font3,command=filterFunction)
+	tcltk::tkgrid(A1.but,A2.but,A3.but,ipadx=20)	
+	tcltk::tkpack(RCSFrame)
 }
 
 

@@ -17,14 +17,11 @@ Hbsimu()
 }
 
 
-\author{ Hinda Haned  \email{contact@hindahaned.info} }
+\author{ Hinda Haned  \email{h.haned@nfi.minvenj.nl} }
 
 \references{
 Gill P, Curran J and Elliot K. A graphical simulation model of the entire DNA process associated with the analysis of short 
 tandem repeat loci.\emph{ Nucleic Acids Research} 2005, 33(2): 632-643.
-}
-\examples{
-Hbsimu()
 }
 
 \keyword{datagen}
