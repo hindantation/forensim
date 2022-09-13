@@ -51,14 +51,10 @@ downloaded with the Tcl/Tk package.\cr
 Gill P, Sparkes P, Pinchin R, Clayton, Whitaker J, Buckleton J. Interpreting simple STR mixtures using allele peak
 areas. \emph{Forensic Sci Int} 1998;91:41-53.
 }
-\author{ Hinda Haned  \email{contact@hindahaned.info} }
+\author{ Hinda Haned  \email{h.haned@nfi.minvenj.nl} }
 
  \seealso{
 \code{\link{A3.simu}}: the three-allele model, and \code{\link{A4.simu}}: the four-allele model}
- 
-\examples{
-A2.simu()
-}
 
 
 \keyword{htest}

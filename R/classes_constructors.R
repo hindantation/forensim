@@ -387,10 +387,10 @@ function(tab,pop.names=NULL)
 {	
 	
 	#  single  population  case
-	if(class(tab)!= "list" )#if it's not a list, it must be a data.frame or a matrix
+	if( !inherits(tab,"list") )#if it's not a list, it must be a data.frame or a matrix
 	{	
 		res <- vector('list',1)
-		if(class(tab) != "data.frame" & class(tab)!="matrix")
+		if( !inherits(tab,"data.frame") & !inherits(tab,"matrix") )
 		{#if tab is not a matrix or data.frame 
 			stop("tab must be a of types  matrix or  data.frame")
 		}
@@ -444,7 +444,7 @@ function(tab,pop.names=NULL)
 	
 	
 	# multiple populations  case 
-	if(class(tab) == "list")
+	if( inherits(tab,"list") )
 	{	
 		p <- length(tab)
 		res <- vector('list',p)
@@ -469,7 +469,7 @@ function(tab,pop.names=NULL)
 		
 		for(i in popfac)
 		{
-			if(class(tab[[i]]) != "data.frame" & class(tab[[i]]) != "matrix")
+			if( !inherits(tab[[i]],"data.frame") & !inherits(tab[[i]],"matrix") )
 			{
 				stop("all elements of tab must be of types matrix or data.frame")
 			}

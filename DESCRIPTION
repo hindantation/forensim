@@ -1,13 +1,20 @@
 Package: forensim
 Type: Package
 Title: Statistical Tools for the Interpretation of Forensic DNA Mixtures
-Version: 4.3
-Date: 2013-09-14
-Author: Hinda Haned <contact@hindahaned.info>
-Maintainer: Hinda Haned <contact@hindahaned.info>
-Depends: methods, tcltk,tcltk2,tkrplot
-Description: Statistical methods and simulation tools for the
-        interpretation of forensic DNA mixtures
+Version: 4.3.1
+Date: 2022-09-13
+Authors@R:
+  c(person(given = "Hinda",
+           family = "Haned",
+           role = c("aut"),
+           email = "hi.haned@gmail.com"),
+    person(given = "Oyvind",
+           family = "Bleka",
+           role = c("cre","ctb"),
+		   email = "oyvble@hotmail.com"))
+Depends: methods
+Imports: tcltk,tkrplot
+Description: Statistical methods and simulation tools for the interpretation of forensic DNA mixtures.
 License: GPL (>= 2)
 LazyLoad: yes
 Collate: classes_definitions.R classes_constructors.R accessors.R
