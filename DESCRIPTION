@@ -3,8 +3,15 @@ Type: Package
 Title: Statistical Tools for the Interpretation of Forensic DNA Mixtures
 Version: 4.3.1
 Date: 2022-09-13
-Author: Hinda Haned <contact@hindahaned.info>
-Maintainer: Oyvind Bleka<oyvble@hotmail.com>
+Authors@R:
+  c(person(given = "Hinda",
+           family = "Haned",
+           role = c("aut"),
+           email = "hi.haned@gmail.com"),
+    person(given = "Oyvind",
+           family = "Bleka",
+           role = c("cre","ctb"),
+		   email = "oyvble@hotmail.com"))
 Depends: methods
 Imports: tcltk,tkrplot
 Description: Statistical methods and simulation tools for the interpretation of forensic DNA mixtures.
