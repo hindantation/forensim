@@ -38,7 +38,7 @@
 
 
 
-\author{ Hinda Haned  \email{contact@hindahaned.info} }
+\author{ Hinda Haned  \email{h.haned@nfi.minvenj.nl} }
 
 
 \examples{

@@ -25,7 +25,7 @@ findfreq(mix, freq, refpop = NULL)
 \value{
 A list giving the allele frequencies for each locus.
 }
-\author{Hinda Haned  <contact@hindahaned.info>}
+\author{Hinda Haned  <h.haned@nfi.minvenj.nl>}
 
 \seealso{\code{\link{simumix}}}
 \examples{
