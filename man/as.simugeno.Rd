@@ -50,11 +50,13 @@ at their respective allele frequencies in the target population.
 
 \author{Hinda Haned \email{h.haned@nfi.minvenj.nl}}
 \examples{
+\dontrun{
 data(Tu)
 tab<-tabfreq(Tu)
 #simulation of 3 individual genotypes for the STR  marker FGA
 geno1 <- simugeno(tab,which.loc='FGA', n =100)
 geno1@tab.geno
+}
 }
 \keyword{manip}
 \keyword{datagen}

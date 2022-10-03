@@ -58,9 +58,11 @@ Wright S. The genetical structure of populations. Ann Eugen 1951;15:323-354.
 \seealso{ \code{\link{simupopD}}}
 
 \examples{
+\dontrun{
 #simulate alleles frequencies for 5 markers with respectively 2, 3, 4, 5, and 6 alleles
 
 simufreqD(nloc=5,na=c(2,3,4,5,6) , alpha=1)
+}
 }
 
 

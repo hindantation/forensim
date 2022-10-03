@@ -17,9 +17,10 @@ Turrina S, Atzei R, De Leo D. Population study of three miniSTR loci in Veneto (
 }
 
 \examples{
+\dontrun{
 data(strveneto)
 #allele frequencies
 strveneto@tab
-
+}
 }
 \keyword{datasets}

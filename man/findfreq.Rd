@@ -29,9 +29,11 @@ A list giving the allele frequencies for each locus.
 
 \seealso{\code{\link{simumix}}}
 \examples{
+\dontrun{
 data(strusa)
 s2<-simumix(simugeno(strusa,n=c(0,2000,0)),ncontri=c(0,2,0))
 findfreq(s2,strusa,refpop="Cauc")
+}
 }
 
 \keyword{ misc }

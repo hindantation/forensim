@@ -40,6 +40,8 @@ Thore Egeland <Thore.Egeland@medisin.uio.no>
 }
 
 \examples{
+\dontrun{
 simMixSNP()
+}
 }
 

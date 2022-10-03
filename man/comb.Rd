@@ -27,8 +27,10 @@ A matrix of  (n+m-1)!/(m!(n-1)!) rows, and n columns, each row is  a possible co
 
 \seealso{  \code{\link{Cmn}} for the calculation of the number of all possible combinations of m elements among n with repetitions  }
 \examples{
+\dontrun{
 #combine 2 objects among 3 with repetitions
 Cmn(2,3)
 comb(2,3)
+}
 }
 \keyword{ models }

@@ -47,8 +47,9 @@
 
 
 \examples{
+\dontrun{
 showClass("simugeno")
-
+}
 }
 \keyword{classes}
 \keyword{manip}

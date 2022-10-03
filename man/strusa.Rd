@@ -27,6 +27,7 @@ Butler JM, Schoske R, Vallone MP, Redman JW, Kline MC.  Allele frequencies for 1
 African American, and Hispanic populations. \emph{ J Forensic Sci} 2003;48(8):908-911.
 }
 \examples{
+\dontrun{
 data(strusa)
 strusa
 #genotypes simulations from each population
@@ -35,6 +36,6 @@ geno
 #3-person mixture simulation with the contributors from the 3 populations
 mix3<- simumix(geno,ncontri=c(1,1,1))
 mix3
-
+}
 }
 \keyword{datasets}

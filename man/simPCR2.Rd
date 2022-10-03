@@ -58,10 +58,10 @@ tandem repeat loci.\emph{ Nucleic Acids Research} 2005, 33(2): 632-643.
 
 
 \examples{
-
+\dontrun{
 #simulation of a 28 cycles PCR, with the initial stain containing 5 cells 
 simPCR2(ncells=5,probEx=0.6,probAlq=0.30,probPCR=0.8,cyc=28, Tdrop=2*10^7,dip=TRUE,KH=55)
-
+}
 }
 %\keyword{manip}
 \keyword{datagen}

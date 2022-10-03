@@ -44,10 +44,10 @@ is.tabfreq(x)
 
 \author{Hinda Haned \email{h.haned@nfi.minvenj.nl}}
 \examples{
+\dontrun{
 data(Tu)
 tabfreq(Tu,pop.names=factor("Tu"))
-
-
+}
 }
 \keyword{manip}
 \keyword{datagen}

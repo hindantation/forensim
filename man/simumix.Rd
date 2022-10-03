@@ -36,10 +36,10 @@ along with informations about the individuals poulations and the loci used to si
 \author{ Hinda Haned  \email{h.haned@nfi.minvenj.nl} }
 
 \examples{
-
+\dontrun{
 showClass("simumix")
 data(strusa)
-
+}
 }
 \keyword{classes}
 \keyword{manip}

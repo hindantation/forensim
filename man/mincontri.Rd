@@ -24,6 +24,7 @@ mincontri(mix, loc = NULL)
 
 \seealso{\code{\link{likestim}} for the estimation of the number of contributors through likelihood maximization }
 \examples{
+\dontrun{
 data(strusa)
 #simulation of 1000 genotypes from the African American allele frequencies
 gen<-simugeno(strusa,n=c(1000,0,0))
@@ -32,5 +33,6 @@ mix5<-simumix(gen,ncontri=c(5,0,0))
 #compare
 likestim(mix5, strusa, refpop="Afri")
 mincontri(mix5)
+}
 }
 \keyword{htest}

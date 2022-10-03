@@ -32,6 +32,8 @@ Returns(P(N=i) for i=1,2,3,4
 %using this function since the probabilyt that the maximum is <=2 equals a product 
 %}
 \examples{
+\dontrun{
 #Distribution for a marker with 20 alles of equal frequency
 N2Exact(p=rep(0.05,20))
+}
 }

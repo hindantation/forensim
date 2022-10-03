@@ -21,12 +21,14 @@ nball(mix, byloc = FALSE)
 
 \seealso{  \code{\link{simumix}} }
 \examples{
+\dontrun{
 data(strusa)
 #simulating 100 genotypes with allele frequencies from the African American population
 gaa<-simugeno(strusa,n=c(100,0,0))
 #simulating a 4-person mixture
 maa4<-simumix(gaa,ncontri=c(4,0,0))
 nball(maa4,byloc=TRUE)
+}
 }
 
 \keyword{ misc }
