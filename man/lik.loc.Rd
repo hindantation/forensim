@@ -58,6 +58,7 @@ likelihood maximization}
 
 
 \examples{
+\dontrun{
 data(strusa)
 #simulation of 1000 genotypes from the Caucasian allele frequencies
 gen<-simugeno(strusa,n=c(0,100,0))
@@ -68,7 +69,7 @@ lik.loc(x=2,mix4, strusa, refpop="Cauc")
 lik.loc(x=2,mix4, strusa, refpop="Afri")
 #You may also want to try:
 #likestim(mix4,strusa,refpop="Cauc")
-
+}
 }
 
 

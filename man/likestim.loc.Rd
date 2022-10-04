@@ -53,12 +53,13 @@ Interpreting DNA Mixtures in Structured Populations. \emph{ J Forensic Sci} 1999
 
 
 \examples{
+\dontrun{
 data(strusa)
 #simulation of 1000 genotypes from the Hispanic allele frequencies
 gen<-simugeno(strusa,n=c(0,0,100))
 #4-person mixture
 mix4 <- simumix(gen,ncontri=c(0,0,4))
 likestim.loc(mix4,strusa,refpop="Hisp")
-
+}
 }
 \keyword{htest}

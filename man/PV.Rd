@@ -38,6 +38,7 @@ maximum likelihood estimator \code{\link{likestim}}
 
 
 \examples{
+\dontrun{
 # the following examples reproduce some of the calculations appearing
 # in the article cited above, for illustrative purpose, the maximum 
 #number of contributors is set here to 5 
@@ -53,6 +54,7 @@ prior2<-c(rep(1/5,5))
 PV(matcondi,prior1)
 #for prior2
 PV(matcondi, prior2)
+}
 }
 
 \keyword{htest}

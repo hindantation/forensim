@@ -34,10 +34,12 @@ a \code{\link{forensim}} object where the slots containing population-related in
 
 
 \examples{
+\dontrun{
 data(strveneto)
 tab1 <- simugeno(strveneto,n=100)
 tab2 <- changepop(tab1,"Veneto","VENE")
 tab1$pop.names
 tab2$pop.names
+}
 }
 \keyword{ manip }

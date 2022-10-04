@@ -62,6 +62,7 @@ Curran, J. M.; Gill, P. & Bill, M. R. Interpretation of repeat measurement DNA e
 
 
 \examples{
+\dontrun{
 #load allele frequencies
 library(forensim)
 data(ngm)
@@ -71,8 +72,7 @@ d10<-ngm$tab$D10
 # contributors (0.04 for homozygotes) 
 LR(Repliste=c(12,13,14),Tp=c(12,13),Td=0,Vp=0,Vd=0,xd=2,xp=1,theta=0,prDHet=c(0.2,0.2),
 prDHom=c(0.04,0.04),prC=0,freq=d10)
-
-
+}
 }
 \keyword{htest}
 

@@ -23,8 +23,10 @@ likelihood of the observed alleles in a mixed DNA stain conditional on the numbe
 
 \seealso{ \code{\link{comb}} for all possible combinations of m elements among n with repetitions}
 \examples{
+\dontrun{
 Cmn(2,3)
 comb(2,3)
+}
 }
 
 \keyword{ models }

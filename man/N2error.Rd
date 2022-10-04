@@ -22,8 +22,10 @@ The probability of error is returned.
 \author{ Thore Egeland \email{Thore.Egeland@medisin.uio.no}}
 
 \examples{
+\dontrun{
 #Example based on 15 markers of Tu data
 library(forensim)
 data(Tu)
 N2error(Tu)
+}
 }

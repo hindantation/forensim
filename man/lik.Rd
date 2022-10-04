@@ -55,13 +55,14 @@ Curran JM, Triggs CM, Buckleton J, Weir BS. Interpreting DNA Mixtures in Structu
 \code{\link{likestim.loc}} for the estimation of the number of contributors to a DNA mixture through
 likelihood maximization}
 \examples{
+\dontrun{
 data(strusa)
 #simulation of 1000 genotypes from the African American allele frequencies
 gen<-simugeno(strusa,n=c(1000,0,0))
 #3-person mixture
 mix3<-simumix(gen,ncontri=c(3,0,0))
 sapply(1:3, function(i) lik(x=i,mix3, strusa, refpop="Afri"))
-
+}
 }
 
 

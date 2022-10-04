@@ -76,10 +76,11 @@ Wright S. The genetical structure of populations. \emph{Ann Eugen} 1951;15:323-3
  	
  
 \examples{
+\dontrun{
 # simulate allele frequencies for two populations
 data(Tu)
 simupopD(npop=2,globalfreq=Tu, which.loc=c("FGA","TH01","TPOX"),
 alpha1=c(0.2,0.3),alpha2=1)
-  
+}  
 }
 \keyword{datagen}

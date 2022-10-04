@@ -26,9 +26,10 @@ D8S1179, D13S317, D16S539, D18S51 and  D21S11, belong to the core CODIS loci use
  Population genetic analysis of 15 STR loci of Chinese Tu ethnic minority group. \emph{Forensic Sci Int}; 174: 255-258.
 }
 \examples{
+\dontrun{
 data(Tu)
 tabfreq(Tu)
-
+}
 }
 \keyword{datasets}
  

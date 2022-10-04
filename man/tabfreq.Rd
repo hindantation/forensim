@@ -42,7 +42,9 @@
 
 
 \examples{
+\dontrun{
 showClass("tabfreq")
+}
 }
 \keyword{classes}
 \keyword{manip}

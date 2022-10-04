@@ -32,8 +32,10 @@ been removed.
 \seealso{ \code{\link{tabfreq}} }
 
 \examples{
+\dontrun{
 data(Tu)
 naomitab(Tu)
+}
 }
 
 \keyword{ manip }

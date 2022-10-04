@@ -37,10 +37,12 @@ implements a particular case of this probability. Please see \url{https://CRAN.R
 
 \seealso{\code{\link{lik.loc}} and  \code{\link{lik}} for calculating the likelihood of a given simumix object }
 \examples{
+\dontrun{
 #likelihood of observing two alleles at frequencies 0.1 and 0.01 when the number of 
 #contributors is 2, in two cases:  theta=0 and theta=0.03
 dataL(x=2,p=c(0.1,0.01), theta=0)
 dataL(x=2,p=c(0.1,0.01), theta=0.03)
+}
 }
 
 \keyword{htest}

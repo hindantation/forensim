@@ -32,8 +32,9 @@ likelihood of the observed alleles in a mixed DNA stain given the number of cont
 
 
 \examples{
-
+\dontrun{
 findmax(1:10)
+}
 }
 
 \keyword{misc}

@@ -45,9 +45,11 @@ Forensic DNA Interpretation. CRC Press 2005;217-74
 
 
 \examples{
+\dontrun{
 data(strusa)
 geno1<-simugeno(strusa,n=c(0,0,100))
 mix2 <-simumix(geno1,ncontri=c(0,0,2))
 PE(mix2,strusa,"Hisp",byloc=TRUE)
+}
 }
 \keyword{htest}

@@ -48,11 +48,12 @@ each individual has a probability of  1/N to be selected.}
 
 \author{Hinda Haned \email{h.haned@nfi.minvenj.nl}}
 \examples{
+\dontrun{
 data(Tu)
 tab<-simugeno(tabfreq(Tu),n=1200)
 #simulation of a 3-person mixture characterized with markers FGA, TH01 and TPOX 
 simumix(tab,which.loc=c('FGA','TH01', 'TPOX') , n =3)
-
+}
 }
 \keyword{manip}
 \keyword{datagen}

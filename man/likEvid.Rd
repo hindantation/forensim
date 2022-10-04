@@ -56,6 +56,7 @@ Curran, J. M.; Gill, P. & Bill, M. R. Interpretation of repeat measurement DNA e
 
 
 \examples{
+\dontrun{
 #load allele frequencies
 library(forensim)
 data(ngm)
@@ -71,6 +72,7 @@ freq=d10)
 # probabilities for the unknowns is kept the same under Hd
 likEvid(Repliste=c(12,13,14),T=0,V=0,x=2,theta=0,prDHet=c(0.2,0.2),
 prDHom=c(0.04,0.04),prC=0,freq=d10)
+}
 }
 \keyword{htest}
 
